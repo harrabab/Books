@@ -1,0 +1,184 @@
+/* menu
+1)imports
+2)for the genre box
+3)for the cover image
+4)for the content
+5)for the video
+6)for the cast
+7)for media query 
+
+
+
+*/
+
+
+
+/* import */
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+*{
+     margin: 0px;
+}.tvdepth-wrapper{
+    width:100%;
+
+}
+/* for the genre box */
+.tvdepth-genre{
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.tvdepth-genre1{
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/* for the cover image */
+.tvdepth-img{
+    display:block;
+    width:100%;
+    height:300px;
+}
+
+
+/* for the content */
+.tvdepth-info{
+    width:100%;
+}
+.tvdepth-info h1{
+      padding:30px 30px 20px;
+      font-family: 'Nunito', sans-serif;
+      color: black;
+      line-height: 44px;
+      margin-left: 20px;
+}
+
+.tvdepth-info h3{
+    padding:10px 0px 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    margin-left: 0px;
+
+}
+
+.tvdepth-info p{
+    padding:10px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    columns: black;
+    line-height: 24px;
+}
+.tvdepth-info1{
+    padding:10px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    columns: #aaaaaa;
+    opacity: 0.6;
+    
+}
+.tvdepth-heart{
+    height: 20px;
+    margin-left: 5px;
+}
+ .tvdepth-info h4{
+     padding:10px;
+    font-size: 20px; 
+    font-family: 'Nunito', sans-serif;
+    columns: black;
+    margin-left: 40px;
+ 
+} 
+/* for the video */
+.tvdepth-iframe {
+    
+    display:none;
+
+}
+/* for the cast */
+.tvdepth-circular{
+    border-radius: 50%;
+    height:150px;
+    width: 150px;
+    margin-left: 30px;
+    
+}
+ .tvdepth-cast{
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    color: #5f9ea0f7;
+ }
+/* for media query */
+ @media only screen and (min-width:455px){
+    .tvdepth-img{
+        display:block;
+        width:100%;
+        height:550px;
+        padding-bottom:30px;
+    }
+.tvdepth-wrapper{
+    width:100%;
+    margin:0 auto;
+
+}
+ 
+   .tvdepth-iframe{
+     width:40%;
+    height:380px;
+    margin-left: 400px;
+    top:1900px;
+     position: absolute;
+
+
+} 
+.tvdepth-info h2{
+    padding:30px 50px 0px;
+
+
+}
+.tvdepth-info h3{
+
+    display:none; 
+}
+.tvdepth-info p{
+  padding:30px 50px 0px;
+
+
+}
+
+
+}  
+  @media only screen and (min-width:1020px){
+    .tvdepth-iframe{
+        display:block;
+       top:1225px;
+       margin-left: 500px;
+
+   }
+   .tvdepth-info h3{
+
+   
+    margin-left:500px;
+    top:970px;
+    position: absolute;
+
+
+}
+
+}

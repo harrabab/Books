@@ -1,0 +1,446 @@
+/**
+~~~~ COMMON STYLES ~~~~
+    1 - IMPORTS
+    2 - Scroll bar styles
+    3 - Common tag selectors
+    4 - Header styles
+    5 - Menu bar styles
+    6 - Footer styles
+    7 - Footer media query for mobile
+    8 - Navigation bar media query for Desktop
+  
+~~~~ HOME PAGE STYLES ~~~~
+    9 - Tag selectors
+    10 - Main content container
+    11 - Home card styles 
+**/
+
+/* 1 - IMPORTS */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+/* 2 Scroll Bar Styles */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #504e4e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 3 - Common tag selectors */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0 auto;
+  padding: 0px;
+  background: #EFEFEF;
+}
+
+.custom-nav-bar a {
+  color: #000;
+}
+
+.logo {
+  margin-right: auto;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 20px;
+  color: #288b8ef7;
+}
+
+/* 4 - Header styles*/
+
+.custom-nav-bar {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  z-index: 3;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo-img {
+  height: 30px;
+  margin-top: 7px;
+}
+
+.custom-nav-bar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+.custom-nav-bar li a {
+  display: block;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.custom-nav-bar .logo {
+  display: block;
+  float: left;
+  padding-left: 10px;
+}
+
+/* 5 - Menu bar styles */
+
+.custom-nav-bar .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.menu {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  left: 0px;
+  background: transparent;
+  bottom: 0px;
+  z-index: 99;
+  height: 50px;
+}
+
+/* Menu icon */
+
+.custom-nav-bar .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.custom-nav-bar .menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: all .2s ease-out;
+  width: 18px;
+}
+
+.custom-nav-bar .menu-icon .nav-icon:before, .custom-nav-bar .menu-icon .nav-icon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.custom-nav-bar .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+.custom-nav-bar .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+.fav-icon-footer {
+  height: 24px;
+}
+
+/* Menu Buttons */
+
+.custom-nav-bar .menu-btn {
+  display: none;
+}
+
+.custom-nav-bar .menu-btn:checked~.menu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-nav-bar .menu-btn:checked~.menu-icon .nav-icon {
+  background: transparent;
+}
+
+.custom-nav-bar .menu-btn:checked~.menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+}
+
+.custom-nav-bar .menu-btn:checked~.menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+}
+
+.custom-nav-bar .menu-btn:checked~.menu-icon:not(.steps) .nav-icon:before, .custom-nav-bar .menu-btn:checked~.menu-icon:not(.steps) .nav-icon:after {
+  top: 0;
+}
+
+/* 6 - Footer styles */
+
+.footer {
+  padding: 20px 0;
+  line-height: 1.6;
+  background: #333333;
+  min-height: 350px;
+  font-size: .8rem;
+}
+
+.footer__text, .footer__link, .footer__title {
+  color: #aaaaaa;
+  padding: 3px 15px;
+  display: block;
+}
+
+.footer__hr {
+  height: 1px;
+  border: none;
+  background: #444444;
+}
+
+.footer__sections {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-left: 20px;
+}
+
+.footer__section {
+  box-sizing: border-box;
+  width: 25%;
+  padding: 15px 0;
+  flex-shrink: 0;
+}
+
+.footer__section ul {
+  padding: 0;
+}
+
+.footer__section li {
+  list-style-type: none;
+}
+
+.footer__title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: #cccccc;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.footer-logo {
+  height: 24px;
+}
+
+/* 7 - Footer media query for mobile */
+
+@media screen and (max-width: 768px) {
+  .footer__section {
+    width: 100%;
+  }
+  .navigation-bar-desktop {
+    display: none;
+  }
+}
+
+/* 8 - Navigation bar media query for Desktop */
+
+@media (min-width: 750px) {
+  .custom-nav-bar li {
+    float: left;
+  }
+  .custom-nav-bar li a {
+    padding: 15px 10px;
+  }
+  .custom-nav-bar .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .custom-nav-bar .menu-icon {
+    display: none;
+  }
+  .menu {
+    position: relative;
+    top: 0px;
+  }
+  .custom-nav-bar .menu-btn:checked~.menu {
+    max-height: 0px;
+    min-height: 50px;
+  }
+}
+
+/****** HOME PAGE STYLES ********/
+
+/* 9 - Tag selectors */
+
+body {
+  background: white;
+}
+
+main {
+  /* background: white; */
+  padding-top: 0px;
+}
+
+/* 10 - Main content container */
+
+.home-main-container {
+  min-height: calc(100vh - 365px);
+  padding: 30px;
+  padding-top: 100px;
+}
+
+.home-header-text {
+  font-size: 20px;
+  padding-left: 20px;
+  color: #AAA;
+}
+
+/* 11 - Home card styles */
+
+.home-tile {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  flex-direction: column;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-tile:hover {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+  width: 200px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.home-icon {
+  height: 275px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-header {
+  width: 200px;
+  font-size: 14px;
+  height: 50px;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.home-tile .go-corner {
+  height: 275px;
+  width: 90px;
+  border-radius: 0;
+  -webkit-transform: skew(12deg);
+  transform: skew(12deg);
+  width: 0px;
+  margin-right: -30px;
+  position: absolute;
+  background-image: linear-gradient(-45deg, #64646141 1%, #4fc1d8c4 100%);
+  transition: all 0.5s;
+}
+
+.home-tile .go-arrow {
+  -webkit-transform: skew(-12deg);
+  transform: skew(-12deg);
+  margin-left: -2px;
+  margin-top: 9px;
+  opacity: 0;
+}
+
+.home-tile:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.home-tile:hover .go-corner {
+  margin-right: -30px;
+  width: 260px;
+}
+
+.home-tile:hover .go-arrow {
+  opacity: 1;
+}
+
+.category-title {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+.category-title:before {
+  content: " ";
+  width: 60px;
+  height: 2px;
+  background: #288b8ef7;
+  position: absolute;
+  top: 30px;
+}
+
+@keyframes animateCardOnHover {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+  }
+  20% {
+    transform: scale(1.1) rotateZ(1deg);
+  }
+  40% {
+    transform: scale(1.1) rotateZ(0deg);
+  }
+  80% {
+    transform: scale(1.1) rotateZ(-1deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(0deg);
+  }
+}

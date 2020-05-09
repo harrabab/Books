@@ -1,0 +1,153 @@
+/* menu
+
+
+1)imports
+2)for setting a backgroundimage
+3)for the introduction
+4)for the form elements 
+5)media query
+
+
+ */
+
+
+
+/* imports */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+
+/* for setting a backgroundimage */
+#contactbody{
+    
+    background-image: url("../images/contact-us-background.webp");
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* for the introduction */
+.contactinto{
+  
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 120px;
+    columns: #333333;;
+    text-align: center;
+    padding-top: 60px
+}
+
+#contactheart{
+    height:15px;
+}
+
+/* for the form elements */
+#contactname{
+    height:40px;
+    width: 370px;
+    margin: 10px;
+    margin-left: 50px;
+    border-radius: 10px;
+
+}
+#contactemail{
+    height:40px;
+    width: 370px;
+    margin-left: 30px;
+    border-radius: 10px;
+    
+
+}
+#contactsubject{
+    height:40px;
+    width: 370px;
+    margin-left: 30px;
+    border-radius: 10px;
+    
+
+}
+#contactmsg{
+    border-radius: 10px;
+    margin-left: 10px;
+}
+#contactselect{
+    height:40px;
+    width: 450px;
+    margin:10px;
+    border-radius: 3px;
+    
+}
+#contactsub{
+    width: 200px;
+    height:30px;
+    color:rgb(17, 20, 17);
+    box-shadow: 2px 2px black;
+    border-radius: 10px;
+
+}
+#contactrobo{
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+}
+
+
+#contactcform{
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    height: 550px;
+    width: 600px;
+    
+    background-color:rgb(238, 231, 231,0.5);
+    font-family: 'Nunito', sans-serif;
+    margin:auto ;
+    color: rgb(41, 39, 36);
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgb(27, 25, 25);
+    margin-bottom: 30px;
+    border-radius: 10px;
+   
+    
+}
+
+
+/* media query */
+@media only screen and (max-width: 700px){
+    #contactcform{
+        line-height: 10px;
+        font-size: 10px;
+        height: 500px;
+        width: 300px;
+    }
+    #contactemailspn{
+        top:10px;
+        margin: 5px;
+    }
+    
+#contactsubject{
+    height:20px;
+    width: 200px;
+    margin-left: 10px;
+}
+#contactemail{
+    height:20px;
+    width: 200px;
+    margin-left: 10px;
+
+}
+#contactname{
+    height:20px;
+    width: 200px;
+    margin-left: 20px;
+}
+#contactmsg{
+    width: 250px;
+
+}
+#contactrobo{
+    height: 15px;
+    width: 15px;
+
+}
+
+}

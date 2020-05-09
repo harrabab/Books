@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+  }
+
+/* main part of terms of service */
+.terms-container  {
+    padding-top: 50px;
+    background-image: linear-gradient(to bottom ,white, #b3cccc );
+
+  }
+  /* details of terms of service */
+.terms-section,h1,h4,h5,h6{
+  padding-left: 30px;
+      padding-right: 40px;
+      text-align: justify;
+}

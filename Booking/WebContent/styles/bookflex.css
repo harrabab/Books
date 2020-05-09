@@ -1,0 +1,103 @@
+html {
+    height: 100%;
+}
+
+/* rating stars */
+.checked {
+    color: orange;
+}
+
+.books-body{
+    overflow-x: hidden;
+    margin-top: -25px;
+}
+
+/* overall book section style */
+.book-container{
+    display: flex;
+    padding: 40px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/* Style for each book tile */
+.book-content-tile{
+    display: flexbox;
+    width: 270px;
+    height: 370px;
+    margin-bottom: 23px;
+    align-items: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to bottom ,white, #b3cccc );
+}
+/* book tile hover */
+.book-content-tile:hover { 
+    background: rgba(0,0,0,0);
+	color: #3a7999;
+    box-shadow: inset 0 0 0 3px #3a7999;
+    cursor: pointer;
+}
+.book-content-header{
+    box-sizing: border-box;
+    width: 270px;
+    height: 60px;
+    font-size: 15px;
+    margin-block-end: 0px;
+}
+.book-content-details{
+    box-sizing: border-box;
+    width: 270px;
+    height: 40px;
+    font-size: 12px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    /*margin-left: 15px;*/
+}
+.book-icon-content-image{
+    margin-top: 15px;
+}
+
+/* header section for books */   
+header {
+        grid-area: header;
+        background-image: url(../images/New_Releases3.jpg);
+        height: 535px;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 900px;
+        background-position: 450px;
+        padding-left: 30px;
+        background-color: #263d5c;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+    }
+ 
+/* style for in-depth review of each book */
+/* overall in-depth review for books */
+.book-depth-container{
+    height: 100%;
+    background-image: linear-gradient(to bottom ,white, #b3cccc );
+    text-align: justify;
+    padding: 40px;
+    margin-top: 25px;
+    padding-top: 60px;
+}
+
+.book-icon-rev-image{
+    float: left;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    box-shadow: 5px,10px, black;
+    margin-bottom: initial;
+}
+#book-details-bold{
+    font-weight: bold;
+}

@@ -1,0 +1,213 @@
+/* menu
+1)import
+2)for the tile 
+3)for the header
+4)for the tvshow-content 
+5)for the discription button
+6) for the welcome note
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+/* for the tile */
+.tvshow-thumbnail {
+  height: 200px;
+  width: 200px;
+}
+
+.tvshow-image {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  
+}
+
+.tvshow-container {
+  display: flex;
+  width: 90vw;
+  color: #313D5A;
+  min-height: 400px;
+  padding: 15px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap:wrap;
+  align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: row;
+    padding-bottom: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tvshow-info {
+  padding: 0px 30px 0px 30px;
+}
+
+.tvshow-pic::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  transition: all .3s linear;
+}
+/* for the header */
+header {
+  background-image: url(../images/friends.jpg);
+  height: 400px;
+  background-position: left;
+  background-attachment: fixed;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: CENTER;
+  background-size: cover;
+  
+}
+
+.tvshow-tile {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+ 
+}
+
+.tvshow-icon {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.tvshow-header {
+  width: 300px;
+}
+
+
+/* for the tvshow-content  */
+.tvshow-content {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+  width: 250px;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+
+}
+
+.tvshow-content .tvshow-content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 250px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer !important;
+  border-radius: 10px;
+}
+
+.tvshow-content:hover .tvshow-content-overlay {
+  opacity: 1;
+}
+
+.tvshow-content-details {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.tvshow-content:hover .tvshow-content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  z-index: 9;
+}
+
+.tvshow-content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.tvshow-content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.read-more-tv-show{
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* for the discription button */
+.read-more-tv-show a{
+  text-decoration: none;
+  color: white;
+}
+
+.tvshow-content:hover {
+  transform: scale(1.1);
+  z-index: 999;
+}
+
+.tvshow-content:hover + .magazine-header{
+  opacity: 0;
+
+}
+
+.read-more-tv-show:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.301);
+}
+
+/* for the welcome note */
+.tvshow-note, .tvshow-description{
+  color: #313D5A; 
+  
+  /* font-size: 30px; */
+}
+
+.tvshow-overlay-title{
+  border-bottom: 1px solid white;
+  margin-bottom: -20px;
+  /* height: 200px; */
+  padding-bottom: 10px;
+}
+
+.tvshow-content:hover .tvshow-overlay-title{
+  margin-bottom: 0px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
